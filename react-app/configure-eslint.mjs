@@ -2,6 +2,9 @@ import { readFile, writeFile } from 'fs/promises'
 
 const main = async () => {
   const eslintConfig = JSON.parse(await readFile('./.eslintrc.json'))
+  eslintConfig.parserOptions = {
+    'project': 'tsconfig.json'
+  }
   eslintConfig.plugins = ['unused-imports']
   eslintConfig.extends = [
     eslintConfig.extends,
@@ -9,6 +12,7 @@ const main = async () => {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:@typescript-eslint/strict'
   ]
   eslintConfig.rules = {
     'react/self-closing-comp': 'error',

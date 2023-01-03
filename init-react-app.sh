@@ -24,7 +24,11 @@ node $start_dir/react-app/configure-tsconfig.mjs
 git add .
 git commit -am "Setup .npmrc and tsconfig.json"
 
-npm install --save-dev eslint-plugin-import eslint-plugin-react-hooks eslint-plugin-unused-imports
+npm install --save-dev \
+  eslint-plugin-import \
+  eslint-plugin-react-hooks \
+  eslint-plugin-unused-imports \
+  @typescript-eslint/eslint-plugin
 node $start_dir/react-app/configure-eslint.mjs
 npx eslint --fix .
 git add .
