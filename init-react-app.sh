@@ -15,7 +15,7 @@ cd $project_dir
 rm -rf ./* ./.*
 
 . ~/.nvm/nvm.sh
-nvm install 19
+nvm install node
 
 npx create-next-app@latest . --ts
 
