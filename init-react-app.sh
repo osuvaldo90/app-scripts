@@ -28,6 +28,8 @@ npm install --save-dev \
   eslint-plugin-import \
   eslint-plugin-react-hooks \
   eslint-plugin-unused-imports \
+  eslint-plugin-jest \
+  @typescript-eslint/parser \
   @typescript-eslint/eslint-plugin
 node $start_dir/react-app/configure-eslint.mjs
 npx eslint --fix .
